@@ -12,6 +12,11 @@
 
   <div id="app">
     <h1>Data Binding: Directives</h1>
+    <a :href=" link.href " :alt="link.alt" :class="link.class"> {{link.text}} </a>
+    <p v-if="showBanner">showing how v-if works</p> <!--wont show whole element-->
+    <p>Secret number: <span v-show="secretNumber"> {{secretNumber}} </span></p> <!--will make display hidden instead of ex above.-->
+    <!--<p> {{post}} </p>-Gör ist->>-->
+    <p v-html="post"></p> 
   </div>
 
   <script>
@@ -24,7 +29,7 @@
           alt: 'Vue.js Website',
           class: 'links'
         },
-        showBanner: false,
+        showBanner: false, //if false wont show in tillänglighets element ex. hela elemntet syns ej men true så ser man 
         secretNumber: 0,
         post: 'This is my <strong>awesome</strong> blog post'
       }

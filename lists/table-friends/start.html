@@ -17,6 +17,20 @@
 <body>
 
   <div id="app">
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>Username:</th>
+        <th>Link:</th>
+      </thead>
+      <tbody>
+        <tr v-for="friend in friends" :key="friend.username">
+          <td> {{ friend.name }} </td>
+          <td> {{ friend.username }} </td>
+          <td><a v-bind:href="'https://www.twitter.com/' + friend.username">@{{ friend.username }} </a></td>
+        </tr>
+      </tbody>
+    </table>
 
   </div>
 

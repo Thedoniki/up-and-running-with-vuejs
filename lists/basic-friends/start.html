@@ -11,7 +11,11 @@
 <body>
 
   <div id="app">
-
+    <ul>
+      <li v-for="friend in friends" v-bind:key="friend.username">
+        {{friend.name}} - @{{friend.username}}
+      </li>
+    </ul>
   </div>
 
   <script>
