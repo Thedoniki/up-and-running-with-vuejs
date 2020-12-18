@@ -20,11 +20,26 @@
 <body>
 
   <div id="app">
-
+    <div :class="{ negative: count <0}" >{{count}} </div>
+    <button v-on:click="increase">Increase</button>
+    <button @click="decrease">Decrease</button>
   </div>
 
   <script>
-
+    const vm = new Vue({
+      el: '#app',
+      data:{
+        count:0
+      },
+      methods: {
+        increase(){
+          this.count++;
+        },
+        decrease(){
+          this.count--;
+        }
+      }
+    })
   </script>
 
 </body>
